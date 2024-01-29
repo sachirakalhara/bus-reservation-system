@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Region;
 use Illuminate\Http\Request;
-use App\Region;
-use DB;
+use Illuminate\Support\Facades\DB as FacadesDB;
+use Illuminate\Support\Facades\Session;
 
 class RegionController extends Controller
 {
@@ -52,7 +53,7 @@ class RegionController extends Controller
              'updated_at' => \Carbon\carbon::now(),
          ];
         //  dd($insertRegion); // we will check okay if we are having all the data okay
-         DB::table('regions')->insert( $insertRegion);
+         FacadesDB::table('regions')->insert( $insertRegion);
          Session::flash('msg', 'Region Register Successfully!');
          return redirect()->back();
  

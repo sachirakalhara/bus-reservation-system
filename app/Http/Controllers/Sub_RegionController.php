@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Region;
+use App\Models\Sub_Region;
 use Illuminate\Http\Request;
-use App\Sub_Region;
-use App\Region;
-use DB;
-use Session;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session as FacadesSession;
+
 class Sub_RegionController extends Controller
 {
     /**
@@ -62,7 +63,7 @@ class Sub_RegionController extends Controller
      ];
     //  dd($insertSubRegion); // we will check okay if we are having all the data okay
      DB::table('sub_regions')->insert( $insertSubRegion);
-     Session::flash('msg', 'Sub Region Register Successfully!');
+     FacadesSession::flash('msg', 'Sub Region Register Successfully!');
      return redirect()->back();
 
      return view('admin.sub_regions.sub-region-list');
