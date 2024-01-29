@@ -1,7 +1,7 @@
 <div class="sidebar-wrapper">
     <ul class="nav">
       <li class="nav-item active  ">
-        <a class="nav-link" href="./dashboard.html">
+        <a class="nav-link" href="/home">
           <i class="material-icons">dashboard</i>
           <p>Dashboard</p>
         </a>
@@ -13,25 +13,25 @@
         </a>
       </li>
       <li class="nav-item ">
-      <a class="nav-link" href="{{route('operator.index')}}">
+      <a class="nav-link" href="operator">
           <i class="material-icons">content_paste</i>
           <p>operators List</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="{{route('bus.index')}}">
+        <a class="nav-link" href="bus">
           <i class="material-icons">library_books</i>
           <p>Buses List</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="{{route('region.index')}}">
+        <a class="nav-link" href="region">
           <i class="material-icons">bubble_chart</i>
           <p>Region List</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="{{route('sub-region.index')}}">
+        <a class="nav-link" href="sub-region">
           <i class="material-icons">location_ons</i>
           <p>Sub Region List</p>
         </a>
