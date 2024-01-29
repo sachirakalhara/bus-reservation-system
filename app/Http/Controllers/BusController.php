@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Buses;
+use App\Models\Operator;
 use Illuminate\Http\Request;
-use App\Operator;
-use App\Buses;
-use Session;
-use DB;
+use Illuminate\Support\Facades\DB as FacadesDB;
+use Illuminate\Support\Facades\Session as FacadesSession;
+
 class BusController extends Controller
 {
     /**
@@ -57,8 +58,8 @@ class BusController extends Controller
             'updated_at' => \Carbon\carbon::now(),
         ];
         // dd($insertBus); // we will check okay if we are having all the data okay
-        DB::table('buses')->insert( $insertBus);
-        Session::flash('msg', 'Bus Register Successfully!');
+        FacadesDB::table('buses')->insert( $insertBus);
+        FacadesSession::flash('msg', 'Bus Register Successfully!');
         return redirect()->back();
 
         return view('admin.buses.bus-list');
