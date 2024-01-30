@@ -19,7 +19,7 @@ class CreateReservationsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('phone');
             $table->integer('passengers')->default(1);
-            $table->text('additional_query');
+            $table->text('additional_query')->nullable();
             $table->boolean('pending')->default(1);
             $table->boolean('rejected')->default(0);
             $table->timestamps();
