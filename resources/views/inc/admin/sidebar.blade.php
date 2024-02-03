@@ -78,6 +78,12 @@
       <i class="fas fa-fw fa-bus-alt"></i>
       <span>My chats</span></a>
   </li>
+
+  <li class="nav-item {{ request()->segment(3) == 'ai' ? 'active': ''}}">
+    <a class="nav-link" href="{{route('ai')}}">
+      <i class="fas fa-fw fa-bus-alt"></i>
+      <span>Chats with bot</span></a>
+  </li>
   
   @role('user')
   <li class="nav-item {{ request()->segment(1) == 'my-reservatins' ? 'active': ''}}">
