@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AiController;
 use App\Http\Controllers\ApiBusController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomeController;
@@ -14,6 +15,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('home', [HomeController::class, 'index'])->name('home.index');
 Route::get('/bus/search', [HomeController::class, 'search'])->name('home.search');
 Route::get('/bus/{bus}', [HomeController::class, 'show'])->name('home.show');
+Route::get('/ai', [AiController::class, 'index'])->name('ai');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [AccountController::class, 'profile'])->name('account.profile');
